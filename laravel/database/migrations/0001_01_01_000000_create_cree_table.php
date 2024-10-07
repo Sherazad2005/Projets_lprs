@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('cree', function (Blueprint $table) {
-            $table->int('ref_event');
-            $table->int('ref_utilisateur');
+            $table->integer('ref_event');
+            $table->integer('ref_utilisateur');
         });
     }
 
