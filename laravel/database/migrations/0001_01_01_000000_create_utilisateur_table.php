@@ -8,22 +8,27 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('utilisateur', function (Blueprint $table) {
-            $table->id_utilisateur();
-            $table->string('name');
+            $table->int("id_utilisateur");
+            $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('mdp');
             $table->string('nom_promo');
             $table->string('cv');
-            $table->string('secteur_activité');
+            $table->string('secteur_activite');
             $table->string('classe');
             $table->string('specialite_prof');
             $table->string('poste_entreprise');
             $table->string('role');
-            $table->string('ref_emplois');
+            $table->int('ref_emplois');
         });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('utilisateur');
     }
 };
