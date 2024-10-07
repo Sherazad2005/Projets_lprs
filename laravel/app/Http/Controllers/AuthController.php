@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Utilisateur;
 use Illuminate\Http\Request;
+namespace App\Http\Controllers;
+
 
 class AuthController extends Controller
 {
     public function inscription(){
         return view('auth.inscription');
     }
-    public function index(){
-        return view('welcome');
+    public function showConnection(){
+        return view('auth.connection');
+
     }
-    function ListUtilisateurs(){
-        $utilisateurs = Utilisateur::get();
-    }
+
+
 }

@@ -10,4 +10,16 @@ class TraitementInscription extends Controller
         return view('auth.inscription');
 
     }
+    public function showConnection(){
+        return view('auth.connection');
+
+    }
+    function inscriptionPost(Request $request){
+
+    }
+
+
+    function connectionPost(Request $request){
+
+    }
 }
